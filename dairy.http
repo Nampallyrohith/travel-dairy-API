@@ -1,0 +1,57 @@
+POST http://localhost:3000/register/
+Content-Type: application/json
+
+{
+  "username": "harsha",
+  "password": "harsha@12",
+  "name": "Harsha",
+  "gender": "male"
+}
+
+###
+POST http://localhost:3000/login/
+Content-Type: application/json
+
+{
+  "username":"harsha",
+  "password":"harsha@12"
+}
+
+###
+
+GET http://localhost:3000/user/places/
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6Im1hbmlrYW50YTE0MyIsImlhdCI6MTcxMzAyNzMzOX0.MwTlbfOfLT1KKoUy_xXftMYp9BjcR8q2-NlaNjlHRrk
+
+###
+
+POST http://localhost:3000/user/places/id/
+Authorization:  Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6Im1hbmlrYW50YTE0MyIsImlhdCI6MTcxMzAyNzMzOX0.MwTlbfOfLT1KKoUy_xXftMYp9BjcR8q2-NlaNjlHRrk
+Content-Type: application/json
+
+{
+  "id": "11",
+  "title": "Qutub Minar",
+  "date": "18/03/2024",
+  "location":"Delhi",
+  "img":"https://hblimg.mmtcdn.com/content/hubble/img/delhi/mmt/activities/m_activities_delhi_qutab_minar_l_384_574.jpg"
+}
+
+###
+
+DELETE http://localhost:3000/user/places/11/
+Authorization:  Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6Im1hbmlrYW50YTE0MyIsImlhdCI6MTcxMzAyNzMzOX0.MwTlbfOfLT1KKoUy_xXftMYp9BjcR8q2-NlaNjlHRrk
+
+
+###
+GET http://localhost:3000/user/places/5/
+Authorization:  Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6Im1hbmlrYW50YTE0MyIsImlhdCI6MTcxMzAyNzMzOX0.MwTlbfOfLT1KKoUy_xXftMYp9BjcR8q2-NlaNjlHRrk
+
+
+###
+PUT http://localhost:3000/user/places/6/
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6Im1hbmlrYW50YTE0MyIsImlhdCI6MTcxMzAyNzMzOX0.MwTlbfOfLT1KKoUy_xXftMYp9BjcR8q2-NlaNjlHRrk
+Content-Type: application/json
+
+{
+  "date": "07/02/2024"
+}
